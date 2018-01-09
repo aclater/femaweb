@@ -13,7 +13,7 @@ def disastersearch (state):
           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
           "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" ]
+          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "GU" ]
     all_disaster_data = {}
     counties = {}
     # Ignore SSL certificate errors
@@ -22,7 +22,10 @@ def disastersearch (state):
     ctx.verify_mode = ssl.CERT_NONE
 
     state=state.upper()
-    if state not in states : return("Not a valid State", 1)
+    if state not in states :
+        lst=list()
+        lst=[state, "Not a valid state"]
+        return(lst)
 
     else:
 
