@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Choose State</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+        <p>
+            {{ form.state.label }}<br>
+            {{ form.state(size=2) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

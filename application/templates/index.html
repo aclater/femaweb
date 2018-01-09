@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>List of FEMA disasters in {{ state }}, ranked by county</h1>
+        {% for county, count in counties %}
+        <div><p>{{ county }} had <b>{{ count }}</b> disasters </p></div>
+        {% endfor %}
+{% endblock %}
