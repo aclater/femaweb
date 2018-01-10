@@ -12,3 +12,5 @@ https://www.fema.gov/openfema-api-documentation
 FEMA Disaster Declarations Summaries API URL
 
 serviceurl = 'https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries?'
+
+Pull requests gleefully accepted
