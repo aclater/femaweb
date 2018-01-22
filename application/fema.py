@@ -14,6 +14,8 @@ def disastersearch(state):
               "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
               "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
 
+    #Delete "GU", "PR" to introduce error for demo use
+
     all_disaster_data = {}
     counties = {}
     # Ignore SSL certificate errors
