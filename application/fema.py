@@ -12,8 +12,7 @@ def disastersearch(state):
               "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
               "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
               "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-              "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
-              "GU", "PR" ]
+              "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" ]
 
     #Delete "GU", "PR" to introduce error for demo use
 
@@ -21,8 +20,7 @@ def disastersearch(state):
     counties = {}
     # Ignore SSL certificate errors
     ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
+       ctx.verify_mode = ssl.CERT_NONE
 
     state = state.upper()
     if state not in states:
