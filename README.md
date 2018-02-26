@@ -1,6 +1,7 @@
 FEMAWeb
+
 FEMAWeb is a test of:
-* Learning Python
+* Learning Python (Python 3)
 * Building an OpenShift Application
 * Consuming OpenFEMA Data as a Web Service
 
