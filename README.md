@@ -29,6 +29,6 @@ Use fema.yml & handle.py
 <pre><code>
 /functions
     fema.yml
-  /fema
-    handle.py
+    /fema
+        handle.py
 </code></pre>
