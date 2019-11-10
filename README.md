@@ -18,5 +18,15 @@ Pull requests gleefully accepted - running application available at
 http://femaweb-femaweb.7e14.starter-us-west-2.openshiftapps.com/
 
 Updated 11/10/2019
-Modify function names to make FEMAWeb compatible with OpenFaas, renaming fema.py to handler.py and disastersearch function to handle
+
+Modify function names to make FEMAWeb compatible with OpenFaas
+
+Rename fema.py to handler.py and disastersearch function to handle
 added error checking in function handle to check state is equal to 2 char 
+
+Use fema.yml & handle.py 
+
+/functions
+  fema.yml
+  /fema
+    handle.py
