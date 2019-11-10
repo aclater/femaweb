@@ -25,10 +25,16 @@ Rename fema.py to handler.py and disastersearch function to handle
 added error checking in function handle to check state is equal to 2 char 
 
 Use fema.yml & handle.py 
+Update fema.yml with your gateway url & your image repo
 
 <pre><code>
 /functions
     fema.yml
     /fema
         handle.py
+        
+faas-cli build -f ./fema.yml
+faas-cli push -f ./fema.yml
+faas-cli deploy -f ./fema.yml
+        
 </code></pre>
