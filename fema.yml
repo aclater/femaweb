@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://157.245.32.41
+functions:
+  fema:
+    lang: python3
+    handler: ./fema
+    image: aclater/fema:latest
+    environment:
+        read_timeout: 10s
+        write_timeout: 10s
+        upstream_timeout: 10s
+
+
