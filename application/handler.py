@@ -3,7 +3,7 @@ import ssl
 import urllib.request
 
 
-def handler(state):
+def handle(state):
     # disastersearch takes a two character state code as input and returns a sorted list of counties and # of disasters
     # we do this by searching the OpenFEMA API for the input state and creating a histogram of the county & disaster count
 
