@@ -26,11 +26,9 @@ added error checking in function handle to check state is equal to 2 char
 
 Use fema.yml & handle.py 
 
+<pre><code>
 /functions
-
-    -fema.yml
-  
+    fema.yml
   /fema
-  
-    -handle.py
-    
+    handle.py
+</code></pre>
