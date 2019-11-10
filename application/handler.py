@@ -3,7 +3,7 @@ import ssl
 import urllib.request
 
 
-def disastersearch(state):
+def handler(state):
     # disastersearch takes a two character state code as input and returns a sorted list of counties and # of disasters
     # we do this by searching the OpenFEMA API for the input state and creating a histogram of the county & disaster count
 
@@ -12,8 +12,8 @@ def disastersearch(state):
               "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
               "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
               "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-              "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
-    #          "GU", "PR"]
+              "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
+              "GU", "PR"]
 
     #Delete "GU", "PR" to introduce error for demo use
 
@@ -25,9 +25,11 @@ def disastersearch(state):
     ctx.verify_mode = ssl.CERT_NONE
 
     state = state.upper()
+    if len(state) != 2:
+        return (state, "Invalid: state abbreviation must be two characters")
     if state not in states:
         lst = list()
-        lst = [state, "Not a valid state"]
+        lst = [state, "Invalid: Not a valid state"]
         return (lst)
 
     else:
