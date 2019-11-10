@@ -1,6 +1,6 @@
 import flask
 from application import application
-from application.handler import handler
+from application.handler import handle
 from application.forms import FEMAWebForm
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
