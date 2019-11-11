@@ -81,7 +81,6 @@ def handle(state):
 
         # Dump our dictionary counties into lst, reverse sort them by value
         # return lst as output of self
-        total_disasters = 0
         lst = list(counties.items())
         lst = sorted(lst, key=lambda x: x[1], reverse=True)
     return (lst)
