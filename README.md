@@ -1,11 +1,36 @@
-FEMAWeb
+# FEMAWeb
 
 FEMAWeb is a test of:
 * Learning Python (Python 3)
 * Building an OpenShift Application
 * Consuming OpenFEMA Data as a Web Service
 
-Documentation
+## Quick start
+
+You need Python 3 and git.
+
+1. Get the code and install the dependencies:
+
+   ```
+   git clone https://github.com/aclater/femaweb.git
+   cd femaweb
+   python3 -m venv .venv
+   . .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+2. Start the app:
+
+   ```
+   gunicorn --bind 127.0.0.1:18080 app:application
+   ```
+
+3. Open http://127.0.0.1:18080/ and enter a two-letter state code.
+
+The state search currently fails with an internal server error: the OpenFEMA v1 endpoint the app calls has been
+retired ([#1](https://github.com/aclater/femaweb/issues/1)).
+
+## Documentation
 
 FEMA API Documentation
 https://www.fema.gov/openfema-api-documentation
@@ -16,6 +41,8 @@ serviceurl = 'https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries?'
 
 Pull requests gleefully accepted - running application available at
 http://femaweb-femaweb.7e14.starter-us-west-2.openshiftapps.com/
+
+## OpenFaaS
 
 Updated 11/10/2019
 
